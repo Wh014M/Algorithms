@@ -9,15 +9,15 @@ namespace EncryptionAlgorithms
         {
             using (RC2CryptoServiceProvider _RC2 = new RC2CryptoServiceProvider())
             {
-                using (SHA256CryptoServiceProvider _SHA256 = new SHA256CryptoServiceProvider())
+                using (MD5CryptoServiceProvider _MD5 = new MD5CryptoServiceProvider())
                 {
-                    byte[] _Key = _SHA256.ComputeHash(Encoding.BigEndianUnicode.GetBytes(_Password));
+                    byte[] _Key = _MD5.ComputeHash(Encoding.BigEndianUnicode.GetBytes(_Password));
                     byte[] _Salt = new byte[] { 0xAA, 0xFF, 0xBB, 0xCF, 0xCC, 0xDD, 0xDF, 0xAF };
 
                     using (Rfc2898DeriveBytes _Rfc2898DeriveBytes = new Rfc2898DeriveBytes(_Key, _Salt, 0x3E8))
                     {
-                        _RC2.KeySize = 0x100;
-                        _RC2.BlockSize = 0x80;
+                        _RC2.KeySize = 0x80;
+                        _RC2.BlockSize = 0x40;
                         _RC2.Key = _Rfc2898DeriveBytes.GetBytes(_RC2.KeySize / 0x8);
                         _RC2.IV = _Rfc2898DeriveBytes.GetBytes(_RC2.BlockSize / 0x8);
                         _RC2.Mode = CipherMode.ECB;
@@ -33,15 +33,15 @@ namespace EncryptionAlgorithms
         {
             using (RC2CryptoServiceProvider _RC2 = new RC2CryptoServiceProvider())
             {
-                using (SHA256CryptoServiceProvider _SHA256 = new SHA256CryptoServiceProvider())
+                using (MD5CryptoServiceProvider _MD5 = new MD5CryptoServiceProvider())
                 {
-                    byte[] _Key = _SHA256.ComputeHash(Encoding.BigEndianUnicode.GetBytes(_Password));
+                    byte[] _Key = _MD5.ComputeHash(Encoding.BigEndianUnicode.GetBytes(_Password));
                     byte[] _Salt = new byte[] { 0xAA, 0xFF, 0xBB, 0xCF, 0xCC, 0xDD, 0xDF, 0xAF };
 
                     using (Rfc2898DeriveBytes _Rfc2898DeriveBytes = new Rfc2898DeriveBytes(_Key, _Salt, 0x3E8))
                     {
-                        _RC2.KeySize = 0x100;
-                        _RC2.BlockSize = 0x80;
+                        _RC2.KeySize = 0x80;
+                        _RC2.BlockSize = 0x40;
                         _RC2.Key = _Rfc2898DeriveBytes.GetBytes(_RC2.KeySize / 0x8);
                         _RC2.IV = _Rfc2898DeriveBytes.GetBytes(_RC2.BlockSize / 0x8);
                         _RC2.Mode = CipherMode.ECB;
