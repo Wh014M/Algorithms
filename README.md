@@ -5,7 +5,7 @@
  Algorithms is ONLY intended to be used on your own pentesting labs, or with explicit consent from the owner of the property being tested.** 
 
 [![GitHub](https://img.shields.io/github/license/kadzicuh/Algorithms)](LICENSE)
-[![Build Status](https://dev.azure.com/kadzicuh/EncryptionAlgorithms/_apis/build/status/kadzicuh.EncryptionAlgorithms?branchName=main)](https://dev.azure.com/kadzicuh/EncryptionAlgorithms/_build/latest?definitionId=12&branchName=main)
+[![Build Status](https://dev.azure.com/kadzicuh/Algorithms/_apis/build/status/kadzicuh.Algorithms?branchName=main)](https://dev.azure.com/kadzicuh/Algorithms/_build/latest?definitionId=14&branchName=main)
 
 ## 📃 License
 Algorithms is distributed under the [MIT License](LICENSE).
