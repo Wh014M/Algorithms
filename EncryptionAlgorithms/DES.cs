@@ -16,7 +16,7 @@ namespace EncryptionAlgorithms
 
                     using (Rfc2898DeriveBytes _Rfc2898DeriveBytes = new Rfc2898DeriveBytes(_Key, _Salt, 0x3E8))
                     {
-                        _DES.KeySize = 0x80;
+                        _DES.KeySize = 0x40;
                         _DES.BlockSize = 0x40;
                         _DES.Key = _Rfc2898DeriveBytes.GetBytes(_DES.KeySize / 0x8);
                         _DES.IV = _Rfc2898DeriveBytes.GetBytes(_DES.BlockSize / 0x8);
@@ -40,7 +40,7 @@ namespace EncryptionAlgorithms
 
                     using (Rfc2898DeriveBytes _Rfc2898DeriveBytes = new Rfc2898DeriveBytes(_Key, _Salt, 0x3E8))
                     {
-                        _DES.KeySize = 0x80;
+                        _DES.KeySize = 0x40;
                         _DES.BlockSize = 0x40;
                         _DES.Key = _Rfc2898DeriveBytes.GetBytes(_DES.KeySize / 0x8);
                         _DES.IV = _Rfc2898DeriveBytes.GetBytes(_DES.BlockSize / 0x8);
